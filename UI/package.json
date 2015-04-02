@@ -1,0 +1,12 @@
+{
+	"name": "cmpe297-assignment-4",
+	"version": "1.0.0",
+	"dependencies":
+	{
+		"express": "~4.0.0",
+		"mysql": "*",
+		"ejs": "~1.0.0",
+		"grunt": "~0.4.5"
+
+	}
+}

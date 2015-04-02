@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Resources</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Resource Allocation Load Balancing</a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="index.html" ><i class="glyphicon glyphicon-home"></i> </a>
+
+                    <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+                        <ul class="nav navbar-nav side-nav">
+                            <li class="active">
+                                <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Registration</a>
+                            </li>
+                            <li>
+                                <a href="login.html"><i class="fa fa-fw fa-bar-chart-o"></i> Login</a>
+                            </li>
+                            <li>
+                                <a href="tables.html"><i class="fa fa-fw fa-table"></i> User Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Request Resources</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </nav>
+
+                <div id="page-wrapper">
+
+                    <div class="container-fluid">
+
+                        <!-- Page Heading -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h1 class="page-header">
+                                    Forms
+                                </h1>
+                                <ol class="breadcrumb">
+                                    <li>
+                                        <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+                                    </li>
+                                    <li class="active">
+                                        <i class="fa fa-edit"></i> Forms
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                        <h1>Select your resources</h1>
+        <form id = "resources"  action = "js/requestHandler.js"  method = "post" class = "resources" >
+        <div class = "jumbotron">
+<div class = "input-group">
+                        <label> Select Storage: 
+<select id="storage">
+<option value="100">100MB Storage </option>
+<option value="500"> 500MB Storage </option>
+<option value="1000">1000MB Storage </option>
+<option value="5000"> 5000MB Storage</option>
+</select> </br> </br>
+</label>
+</div>
+
+<div class = "input-group">
+                        <label> Select Memory: 
+<select id="memory">
+<option value="100">100MB Storage </option>
+<option value="500"> 500MB Storage </option>
+<option value="1000">1000MB Storage </option>
+<option value="5000"> 5000MB Storage</option>
+</select> </br> </br>
+</label>
+</div>
+
+<div class = "input-group">
+                        <label> Select Device
+<select id="device">
+<option value="Apple iOS"> Apple iOS</option>
+<option value="Android OS"> Android OS</option>
+<option value="Windows OS"> Windows OS</option>
+<option value="Linux OS"> Linux OS</option>
+</select> </br> </br>
+</label>
+</div>
+
+<div class = "input-group">
+                        <label> Select Network Bandwidth
+<select id="network">
+<option value="10"> 10 Mbps</option>
+<option value="50">50 Mbps</option>
+<option value="100">100 Mbps</option>
+<option value="200">200 Mbps</option>
+</select> </br> </br>
+</label>
+</div>
+<div class="col-md-offset-5">
+<div class = <"btn-group btn-group-justified">
+ <input type="button"  name = "button" value ="Submit" class="btn btn-default btn-lg" id="btn1" onclick="sendToServer()"> &nbsp; &nbsp;
+<button id = "btn2" class = "btn btn-default btn-lg " onclick ="refresh()"> Reset </button> 
+</div> </div>
+</form>
+
+</div>
+
+
+
+           <!-- jQuery -->
+           <script src="js/jquery.js"></script>
+            <script src="js/buttonrequest.js"></script>
+
+           <!-- Bootstrap Core JavaScript -->
+           <script src="js/bootstrap.min.js"></script>
+<script>
+function refresh()
+{
+    window.location.reload();
+}   
+</script>
+       </body>
+
+       </html>
